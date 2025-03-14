@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f1f1;
+}
+
+main {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    width: 700px;
+    height: 400px;
+    background: #232323;
+    box-shadow: 0 0 200px rgba(123, 23, 159, 0.7);
+    overflow: hidden;
+    display: flex;
+    gap: 10px;
+}
+
+main .left {
+    flex-shrink: 0;
+    box-sizing: content-box !important;
+    width: fit-content;
+    height: 100%;
+    background: #111 !important;
+    color: #ccc;
+    font-size: 14px;
+    overflow: hidden;
+    line-height: 20px;
+    font-family: Consolas, "Courier New", monospace;
+    display: flex;
+    flex-direction: column;
+}
+
+main .left span {
+    box-sizing: content-box !important;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+main .right {
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    background: #232323;
+    display: flex;
+}
+
+main #out {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    font-family: Consolas, "Courier New", monospace;
+    width: 100%;
+    height: 100%;
+
+    padding-right: 20px;
+
+    background: transparent;
+    color: #f1f1f1;
+    line-height: 20px;
+
+
+    tab-size: 4;
+    overflow: hidden;
+    outline: none;
+    border: none;
+}
+
+
+main #inp {
+    position: absolute;
+    top: 0;
+
+    line-height: 20px;
+    font-size: 14px;
+    font-family: Consolas, "Courier New", monospace;
+    width: 100%;
+    height: 100%;
+
+    background: none;
+    color: transparent;
+
+    text-wrap: no-wrap;
+    resize: none;
+    caret-color: #fff;
+    tab-size: 4;
+    outline: none;
+    border: none;
+}
+
+main #inp::webkit-scrollbar {
+    width: 50px;
+    height: 50px;
+}
+
+main #inp::webkit-scrollbar-thumb {
+    width: 50px;
+    height: 50px;
+}
+
+.cursor {
+    position: absolute;
+    display: flex;
+    width: 2px;
+    height: 20.8px;
+    background: #fafafa;
+    animation: cursor 0.4s linear infinite;
+}
+
+@keyframes cursor {
+    from {
+        background: #fafafa;
+    }
+
+    to {
+        background: transparent;
+    }
+}
+
+
+
+
+.line {
+    word-break: break-word;
+    white-space: pre-wrap;
+}
+
+.tab {
+
+    white-space: pre-wrap !important;
+}
+
+.comment {
+    color: gray !important;
+}
+
+.string {
+    color: #CDF861;
+}
+
+.keyword {
+    color: #A390FF;
+}
+
+.tag {
+    color: orange;
+}
